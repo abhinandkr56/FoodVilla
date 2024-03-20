@@ -122,4 +122,11 @@ li{
   .shimmer-text-small {
     width: 50%;
   }
-  
+  .no-rest-found-body{
+    height: 100vh;
+    width: 100vW;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

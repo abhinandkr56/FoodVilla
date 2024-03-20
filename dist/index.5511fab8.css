@@ -124,4 +124,12 @@ li {
 .shimmer-text-small {
   width: 50%;
 }
+
+.no-rest-found-body {
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
 /*# sourceMappingURL=index.5511fab8.css.map */

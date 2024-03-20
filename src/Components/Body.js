@@ -44,12 +44,12 @@ const Body = () => {
       <button className="search-button" onClick={() => filterData()}>Search</button>
     </div>
       <div className="body">
-        {filteredRestaurants.length === 0 ? (
+        {restaurants.length === 0 ? (
        
           Array.from({ length: 10 }, (_, index) => (
             <Shimmer key={index} />
           ))
-    ): filteredRestaurants?.map((rest) => (
+    ): (filteredRestaurants.length === 0 ? <div className="no-rest-found-body">No restaurants found</div> : filteredRestaurants?.map((rest) => (
           <RestaurantCard
             key = {rest.info.id}
             image={ IMG_CDN_URL + rest.info.cloudinaryImageId}
@@ -57,7 +57,7 @@ const Body = () => {
             location={rest.info.locality}
             rating={rest.info.avgRating}
           />
-        ))}
+        )))}
       </div>
     </>
   );
