@@ -29227,21 +29227,23 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _krfoodsJpeg = require("../Assets/images/KRFOODS.jpeg");
+var _krfoodsJpegDefault = parcelHelpers.interopDefault(_krfoodsJpeg);
 const Title = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         href: "/",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
             className: "logo",
             alt: "logo",
-            src: "https://st4.depositphotos.com/15090952/20075/v/450/depositphotos_200753984-stock-illustration-food-restaurant-logo-dish-background.jpg"
+            src: (0, _krfoodsJpegDefault.default)
         }, void 0, false, {
             fileName: "src/Components/Title.js",
-            lineNumber: 4,
+            lineNumber: 5,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/Title.js",
-        lineNumber: 3,
+        lineNumber: 4,
         columnNumber: 9
     }, undefined);
 };
@@ -29255,6 +29257,44 @@ $RefreshReg$(_c, "Title");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire1a02")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Assets/images/KRFOODS.jpeg":"ajnnv"}],"ajnnv":[function(require,module,exports) {
+module.exports = require("2cb970de90103466").getBundleURL("aXMci") + "KRFOODS.b1d8cbf0.jpeg" + "?" + Date.now();
+
+},{"2cb970de90103466":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire1a02")
 
 //# sourceMappingURL=index.7271efb6.js.map
