@@ -20,7 +20,7 @@ const Body = () => {
     }
   }
 
-  useEffect(async () => {
+  useEffect(() => {
     getRestaurent();
   },[])
 

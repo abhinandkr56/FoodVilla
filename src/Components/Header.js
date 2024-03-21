@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Title from "./Title"
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -9,9 +10,9 @@ const Header = () => {
             <div className="navbar">
                 <Title/>
                 <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to={"/contact"}>Contact</Link></li>
                         <li>Cart</li>
                         {
                 authenticated ?  <li><button onClick={() => setAuthenticated(false)}>Logout</button></li> : <li><button onClick={() => setAuthenticated(true)}>Login</button></li>
