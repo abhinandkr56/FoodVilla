@@ -1,3 +1,4 @@
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -30,7 +31,7 @@
     margin: 10px;
 }
 
-.restaurant-card > img {
+.restaurant-card-img {
     width: 100%;
     height: 300px;
 }
@@ -129,4 +130,21 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .restarent-menus{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10;
+  }
+
+  .restaurant-menu-card{
+    width : 300px;
+    padding: 10px;
+    margin: 10px;
+    border: black solid 1px;
+  }
+
+  .restaurant-menu-card > img{
+    width: 100%;
   }

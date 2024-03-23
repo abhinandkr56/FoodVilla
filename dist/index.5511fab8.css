@@ -31,7 +31,7 @@
   padding: 10px;
 }
 
-.restaurant-card > img {
+.restaurant-card-img {
   width: 100%;
   height: 300px;
 }
@@ -131,5 +131,22 @@ li {
   width: 100vw;
   height: 100vh;
   display: flex;
+}
+
+.restarent-menus {
+  flex-wrap: wrap;
+  gap: 10px;
+  display: flex;
+}
+
+.restaurant-menu-card {
+  border: 1px solid #000;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.restaurant-menu-card > img {
+  width: 100%;
 }
 /*# sourceMappingURL=index.5511fab8.css.map */

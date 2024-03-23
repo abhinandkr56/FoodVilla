@@ -1,12 +1,15 @@
+import { Link } from "react-router-dom";
 
 
 const RestaurantCard = (props) => {
     return (
         <div className="restaurant-card">
-            <img src={props.image}></img>
+            <Link to={`/restaurent/${props.restaurentid}`}>
+            <img src={props.image} className="restaurant-card-img"></img>
             <h2>{props.name}</h2>
             <h3>{props.location }</h3>
             <h4>{props.rating} stars</h4>
+            </Link>
         </div>
     )
 }

@@ -2,9 +2,7 @@ import { useState } from "react";
 import Title from "./Title"
 import { Link } from "react-router-dom";
 
-const Header = () => {
-
-    const [authenticated, setAuthenticated] = useState(false);
+const Header = (prop) => {
     return ( 
         <div className="header">
             <div className="navbar">
@@ -15,7 +13,7 @@ const Header = () => {
                         <li><Link to={"/contact"}>Contact</Link></li>
                         <li>Cart</li>
                         {
-                authenticated ?  <li><button onClick={() => setAuthenticated(false)}>Logout</button></li> : <li><button onClick={() => setAuthenticated(true)}>Login</button></li>
+                prop.isAuthenticated ?  <li><button onClick={prop.logout}>Logout</button></li> : <li><button onClick={() => alert("undefined")}>Login</button></li>
             }
                 </ul>
               

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import  ReactDOM from "react-dom/client";
 import AppLayout from "./Components/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -7,37 +7,51 @@ import Body from "./Components/Body";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestaurentMenu from "./Components/RestaurentMenu";
+import Login from "./Components/Login";
 
 
+const App = () => {
+   
+    
+    const onLoginSubmit =(values) => {
+        setAuthenticated(true);
+        }
 
+        const logout = () => {
+            setAuthenticated(false);
+        }
+    const [authenticated, setAuthenticated] = useState(false);
+  
+    const appRouter = createBrowserRouter([
+        {
+            path : "/",
+            element: <AppLayout isAuthenticated ={authenticated} logout = {logout}/>,
+            errorElement: <Error/>,
+            children : [
+                {
+                    path : "/",
+                    element: <Body/>
+                },
+                {
+                    path : "/about",
+                    element: <About/>
+                },
+                {
+                    path : "/contact",
+                    element: <Contact/>
+                },
+                {
+                    path: "restaurent/:id",
+                    element: <RestaurentMenu/>
+                }
+            ]
+        }
+        ]);
 
-
-const appRouter = createBrowserRouter([
-    {
-        path : "/",
-        element: <AppLayout/>,
-        errorElement: <Error/>,
-        children : [
-            {
-                path : "/",
-                element: <Body/>
-            },
-            {
-                path : "/about",
-                element: <About/>
-            },
-            {
-                path : "/contact",
-                element: <Contact/>
-            },
-            {
-                path: "restaurent/:id",
-                element: <RestaurentMenu/>
-            }
-        ]
-    }
-    ]);
+   return authenticated ? <RouterProvider router={appRouter}/> : <Login onSubmit = {onLoginSubmit}/>;
+    
+}
 
 const rootEleemnt = document.getElementById("root");
 const root = ReactDOM.createRoot(rootEleemnt);
-root.render(<RouterProvider router={appRouter}/>);
+root.render(<App/>)

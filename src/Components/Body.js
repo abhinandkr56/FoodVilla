@@ -52,6 +52,7 @@ const Body = () => {
     ): (filteredRestaurants.length === 0 ? <div className="no-rest-found-body">No restaurants found</div> : filteredRestaurants?.map((rest) => (
           <RestaurantCard
             key = {rest.info.id}
+            restaurentid = {rest?.info?.id}
             image={ IMG_CDN_URL + rest.info.cloudinaryImageId}
             name={rest.info.name}
             location={rest.info.locality}

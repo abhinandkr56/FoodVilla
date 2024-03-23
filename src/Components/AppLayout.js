@@ -3,10 +3,10 @@ import Footer from "./Footer";
 import Header from "./Header"
 
 
-const AppLayout = () => {
+const AppLayout = (prop) => {
     return (
         <>
-            <Header/>
+            <Header isAuthenticated={prop.isAuthenticated} logout={prop.logout}/>
             <Outlet/>
             <Footer/>
         </>
