@@ -34505,42 +34505,54 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
 const About = ()=>{
+    _s();
+    (0, _react.useEffect)(()=>{
+        console.log("useeffect called");
+        const timer = setInterval(()=>{
+            console.log("Timer started");
+        }, 1000);
+        return ()=>{
+            console.log("Unmount called");
+            clearInterval(timer);
+        };
+    });
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: "About Us Page"
             }, void 0, false, {
                 fileName: "src/Components/About.js",
-                lineNumber: 7,
+                lineNumber: 19,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
             }, void 0, false, {
                 fileName: "src/Components/About.js",
-                lineNumber: 8,
+                lineNumber: 20,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
             }, void 0, false, {
                 fileName: "src/Components/About.js",
-                lineNumber: 9,
+                lineNumber: 21,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
             }, void 0, false, {
                 fileName: "src/Components/About.js",
-                lineNumber: 11,
+                lineNumber: 23,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
             }, void 0, false, {
                 fileName: "src/Components/About.js",
-                lineNumber: 12,
+                lineNumber: 24,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -34548,12 +34560,12 @@ const About = ()=>{
                 children: "profile"
             }, void 0, false, {
                 fileName: "src/Components/About.js",
-                lineNumber: 14,
+                lineNumber: 26,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/Components/About.js",
-                lineNumber: 15,
+                lineNumber: 27,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34563,7 +34575,7 @@ const About = ()=>{
                         children: "Name"
                     }, void 0, false, {
                         fileName: "src/Components/About.js",
-                        lineNumber: 17,
+                        lineNumber: 29,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -34571,22 +34583,23 @@ const About = ()=>{
                         children: "Abhi"
                     }, void 0, false, {
                         fileName: "src/Components/About.js",
-                        lineNumber: 18,
+                        lineNumber: 30,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/About.js",
-                lineNumber: 16,
+                lineNumber: 28,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/About.js",
-        lineNumber: 6,
+        lineNumber: 18,
         columnNumber: 5
     }, undefined);
 };
+_s(About, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = About;
 exports.default = About;
 var _c;

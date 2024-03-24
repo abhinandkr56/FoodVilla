@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
 const About = () => {
+
+  useEffect(() => {
+    console.log("useeffect called");
+    
+    const timer = setInterval(() => {
+      console.log("Timer started");
+    },1000);
+    return(() => {
+      console.log("Unmount called");
+      clearInterval(timer);
+    })
+  })
   return (
     <div>
         <h1>About Us Page</h1>
