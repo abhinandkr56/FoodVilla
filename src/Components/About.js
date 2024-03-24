@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -10,36 +11,13 @@ const About = () => {
         <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
         <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
 
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-        <p>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
-
-    </div>
+        <Link to={"profile"}>profile</Link>
+        <Outlet/>
+        <div>
+          <span htmlFor='Name'>Name</span>
+          <p id='Name'>Abhi</p>
+        </div>
+        </div>
   )
 }
 

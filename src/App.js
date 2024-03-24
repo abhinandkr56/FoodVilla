@@ -8,6 +8,7 @@ import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestaurentMenu from "./Components/RestaurentMenu";
 import Login from "./Components/Login";
+import Profile from "./Components/ProfileClass";
 
 
 const App = () => {
@@ -34,7 +35,11 @@ const App = () => {
                 },
                 {
                     path : "/about",
-                    element: <About/>
+                    element: <About/>,
+                    children : [{
+                        path : "profile",
+                        element : <Profile name="Abhi"/>
+                    }]
                 },
                 {
                     path : "/contact",
