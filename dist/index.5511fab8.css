@@ -149,4 +149,13 @@ li {
 .restaurant-menu-card > img {
   width: 100%;
 }
+
+.offline-body {
+  color: #000;
+  background-color: #7fffd4;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  display: flex;
+}
 /*# sourceMappingURL=index.5511fab8.css.map */

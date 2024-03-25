@@ -1,32 +1,36 @@
-import React, { useState } from "react";
+import React, { lazy, Suspense } from "react";
 import  ReactDOM from "react-dom/client";
 import AppLayout from "./Components/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import About from "./Components/About";
+//import About from "./Components/About";
 import Body from "./Components/Body";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestaurentMenu from "./Components/RestaurentMenu";
 import Login from "./Components/Login";
 import Profile from "./Components/ProfileClass";
+import useLocalStorage from "./utils/useLocalStorage";
+import Shimmer from "./Components/Shimmer";
+//import InstaMart from "./Components/InstaMart";
 
 
+const InstaMart = lazy(() => import("./Components/InstaMart"));
+const About = lazy(() => import("./Components/About"));
 const App = () => {
-   
     
     const onLoginSubmit =(values) => {
-        setAuthenticated(true);
+        setAuthenticatedLocalStorage(true);
         }
 
         const logout = () => {
-            setAuthenticated(false);
+            setAuthenticatedLocalStorage(false);
         }
-    const [authenticated, setAuthenticated] = useState(false);
+    const [authenticatedLocalStorage, setAuthenticatedLocalStorage] = useLocalStorage("IsAuthenticated", false);
   
     const appRouter = createBrowserRouter([
         {
             path : "/",
-            element: <AppLayout isAuthenticated ={authenticated} logout = {logout}/>,
+            element: <AppLayout isAuthenticated ={authenticatedLocalStorage} logout = {logout}/>,
             errorElement: <Error/>,
             children : [
                 {
@@ -35,7 +39,7 @@ const App = () => {
                 },
                 {
                     path : "/about",
-                    element: <About/>,
+                    element: <Suspense fallback= {<h1>Loading...</h1>}><About/></Suspense>,
                     children : [{
                         path : "profile",
                         element : <Profile name="Abhi"/>
@@ -48,12 +52,16 @@ const App = () => {
                 {
                     path: "restaurent/:id",
                     element: <RestaurentMenu/>
+                },
+                {
+                    path:"/instamart",
+                    element : <Suspense fallback ={<Shimmer/>}><InstaMart/></Suspense>
                 }
             ]
         }
         ]);
 
-   return authenticated ? <RouterProvider router={appRouter}/> : <Login onSubmit = {onLoginSubmit}/>;
+   return authenticatedLocalStorage ? <RouterProvider router={appRouter}/> : <Login onSubmit = {onLoginSubmit}/>;
     
 }
 

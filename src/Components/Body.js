@@ -2,6 +2,8 @@ import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { IMG_CDN_URL } from "../constants"
 import { useEffect, useState } from "react";
+import { filter } from "../utils/helper";
+import useOnline from "../utils/useOnline";
 
 const Body = () => {
 
@@ -11,14 +13,10 @@ const Body = () => {
 
 
   const filterData =() => {
-    if(searchText == ""){
-      setFilteredRestaurants(restaurants);
-    }
-    else{
-      var newRestaurants = restaurants?.filter(x => x.info.name.toLowerCase().includes(searchText.toLowerCase()));
-      setFilteredRestaurants(newRestaurants);
-    }
+    var newRestaurants = filter(searchText, restaurants);
+    setFilteredRestaurants(newRestaurants);
   }
+
 
   useEffect(() => {
     getRestaurent();
@@ -31,7 +29,11 @@ const Body = () => {
     setRestaurants(restaurantsData);
     setFilteredRestaurants(restaurantsData);
   }
+  const online = useOnline();
 
+  if(!online){
+    return <div className="offline-body"><h1>Offline, please check your internet connection</h1></div>
+  }
   return (
     <>
     <div className="search-container">
