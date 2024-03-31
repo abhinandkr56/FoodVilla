@@ -1,4 +1,7 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -49,9 +52,9 @@
 }
 
 .footer > div {
-    flex: 1; /* Each section takes equal width */
-    margin: 0 20px; /* Adds space between sections */
-    text-align: center; /* Centers the text within each section */
+    flex: 1; 
+    margin: 0 20px; 
+    text-align: center; 
 }
 
 ul{
@@ -64,7 +67,7 @@ li{
 }
 
 .footer-contactus {
-    text-align: left; /* Ensures text alignment is consistent */
+    text-align: left; 
 }
 
 .search-container{
@@ -93,7 +96,7 @@ li{
 }
 
 .search-button:hover {
-    background-color: #cc6600; /* Slightly darker on hover */
+    background-color: #cc6600; 
 }
 
 .shimmer{
@@ -106,13 +109,11 @@ li{
     gap: 10;
 }
   .shimmer-box {
-    background-color: #f6f6f6; /* Light gray color */
     margin: 8px 0;
   }
   
   .shimmer-image {
-    height: 300px; /* Adjust to match your image size */
-  }
+    height: 300px; 
   
   .shimmer-text {
     height: 20px;
@@ -156,4 +157,4 @@ li{
     align-items: center;
     background-color:aquamarine;
     color: black;
-  }
+  } */

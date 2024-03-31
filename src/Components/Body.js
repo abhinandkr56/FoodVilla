@@ -36,16 +36,16 @@ const Body = () => {
   }
   return (
     <>
-    <div className="search-container">
-      <input type="text" placeholder="Search" value={searchText} className="search-input" onChange={(e) => setSearchText(e.target.value)} 
+    <div className="search-container flex justify-center items-center p-2">
+      <input type="text" placeholder="Search" value={searchText} className="search-input p-2.5 mr-1 border border-blue-900 rounded w-80 focus:bg-orange-100" onChange={(e) => setSearchText(e.target.value)} 
        onKeyDown={(e) => {
         if (e.key === 'Enter') {
           filterData();
         }
       }}></input>
-      <button className="search-button" onClick={() => filterData()}>Search</button>
+      <button className="search-button bg-orange-500 cursor-pointer px-5 py-2.5 text-white rounded transition-colors duration-300" onClick={() => filterData()}>Search</button>
     </div>
-      <div className="body">
+      <div className="body flex flex-col sm:flex-row flex-wrap gap-3 justify-center">
         {restaurants.length === 0 ? (
        
           Array.from({ length: 10 }, (_, index) => (

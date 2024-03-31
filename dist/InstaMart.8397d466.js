@@ -614,21 +614,62 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _section = require("./Section");
+var _sectionDefault = parcelHelpers.interopDefault(_section);
+var _s = $RefreshSig$();
 const InstaMart = ()=>{
+    _s();
+    const [visibleSection, setVisibleSection] = (0, _react.useState)("about");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Insta Mart"
-        }, void 0, false, {
-            fileName: "src/Components/InstaMart.js",
-            lineNumber: 4,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "text-4xl p-2 m-2 font-bold",
+                children: "Insta Mart"
+            }, void 0, false, {
+                fileName: "src/Components/InstaMart.js",
+                lineNumber: 9,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sectionDefault.default), {
+                title: "About InstaMart",
+                descriptions: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+                isVisible: visibleSection === "about",
+                setIsVisible: (e)=>e ? setVisibleSection("about") : setVisibleSection("")
+            }, void 0, false, {
+                fileName: "src/Components/InstaMart.js",
+                lineNumber: 11,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sectionDefault.default), {
+                title: "Team InstaMart",
+                descriptions: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+                isVisible: visibleSection === "teams",
+                setIsVisible: (e)=>e ? setVisibleSection("teams") : setVisibleSection("")
+            }, void 0, false, {
+                fileName: "src/Components/InstaMart.js",
+                lineNumber: 13,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sectionDefault.default), {
+                title: "Career InstaMart",
+                descriptions: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+                isVisible: visibleSection === "career",
+                setIsVisible: (e)=>e ? setVisibleSection("career") : setVisibleSection("")
+            }, void 0, false, {
+                fileName: "src/Components/InstaMart.js",
+                lineNumber: 15,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/Components/InstaMart.js",
-        lineNumber: 3,
+        lineNumber: 8,
         columnNumber: 9
     }, undefined);
 };
+_s(InstaMart, "Ltv8FNC09Gkm9avKSRaVAqrdguY=");
 _c = InstaMart;
 exports.default = InstaMart;
 var _c;
@@ -639,6 +680,70 @@ $RefreshReg$(_c, "InstaMart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["3jy9j","1xC6H"], null, "parcelRequire1a02")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Section":"ekdOK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ekdOK":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$082e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$082e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+const Section = ({ title, descriptions, isVisible, setIsVisible })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "border border-black p-2 m-2",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "text-2.xl font-bold ",
+                children: title
+            }, void 0, false, {
+                fileName: "src/Components/Section.js",
+                lineNumber: 6,
+                columnNumber: 9
+            }, undefined),
+            !isVisible ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "underline cursor-pointer",
+                onClick: ()=>setIsVisible(true),
+                children: "Show"
+            }, void 0, false, {
+                fileName: "src/Components/Section.js",
+                lineNumber: 8,
+                columnNumber: 26
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "underline cursor-pointer",
+                onClick: ()=>setIsVisible(false),
+                children: "Hide"
+            }, void 0, false, {
+                fileName: "src/Components/Section.js",
+                lineNumber: 11,
+                columnNumber: 11
+            }, undefined),
+            isVisible && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: descriptions
+            }, void 0, false, {
+                fileName: "src/Components/Section.js",
+                lineNumber: 16,
+                columnNumber: 23
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/Components/Section.js",
+        lineNumber: 5,
+        columnNumber: 13
+    }, undefined);
+};
+_c = Section;
+exports.default = Section;
+var _c;
+$RefreshReg$(_c, "Section");
+
+  $parcel$ReactRefreshHelpers$082e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["3jy9j","1xC6H"], null, "parcelRequire1a02")
 
 //# sourceMappingURL=InstaMart.8397d466.js.map
