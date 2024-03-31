@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import  ReactDOM from "react-dom/client";
 import AppLayout from "./Components/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -17,8 +17,15 @@ import Shimmer from "./Components/Shimmer";
 const InstaMart = lazy(() => import("./Components/InstaMart"));
 const About = lazy(() => import("./Components/About"));
 const App = () => {
-    
+    const [user, setUser] = useState({
+        name : "Abhinandhu",
+        email: "abhi@abhi.com"
+    });
     const onLoginSubmit =(values) => {
+        setUser({
+            name : values.email,
+            email: values.email
+        })
         setAuthenticatedLocalStorage(true);
         }
 
@@ -30,7 +37,7 @@ const App = () => {
     const appRouter = createBrowserRouter([
         {
             path : "/",
-            element: <AppLayout isAuthenticated ={authenticatedLocalStorage} logout = {logout}/>,
+            element: <AppLayout isAuthenticated ={authenticatedLocalStorage} logout = {logout} user = {user}/>,
             errorElement: <Error/>,
             children : [
                 {

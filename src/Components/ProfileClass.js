@@ -1,5 +1,5 @@
 import React from "react";
-
+import UserContext from "../utils/UserContext";
 class Profile extends React.Component{
     constructor(){
         super();
@@ -27,7 +27,11 @@ class Profile extends React.Component{
                     count : this.state.count+2,
                     count2 : this.state.count % 10 == 1 ?  this.state.count2+1 : this.state.count2
                 });
-             }}>Increment</button>
+             }} className="border border-black">Increment</button>
+
+            <UserContext.Consumer>
+                {(val) => <p>{"name from context is: " +val.name}</p>}
+            </UserContext.Consumer>
             </>
            
         )

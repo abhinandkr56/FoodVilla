@@ -1,9 +1,14 @@
+import { useContext } from "react";
+import FooterContext from "../utils/FooterContext";
+
 const Footer = () => {
+    var footerContext = useContext(FooterContext);
     return (
         <div className="footer bg-black border border-solid text-white flex h-[400px] justify-around items-start flex-wrap p-5">
             <div className="flex-1 mx-5 text-center">
                 <h2 className="font-bold text-xl">Food Villa</h2>
                 <h5 className="p-2">© 2023 Bundl Technologies Pvt. Ltd</h5>
+                <h2>{footerContext.copyright}</h2>
             </div>
             <div className="footer-company flex-1 mx-5 text-center">
                 <h2 className="font-bold text-xl">Company</h2>
