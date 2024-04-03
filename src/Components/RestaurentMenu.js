@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { IMG_CDN_URL } from '../constants';
 import Shimmer from './Shimmer';
 import useRestaurant from '../utils/useRestaurant';
+import { addItem } from '../utils/cartSlice';
 
 
 const RestaurentMenu = () => {
@@ -29,6 +30,7 @@ const RestaurentMenu = () => {
         <h3>{x.card.info.description}</h3>
         <button className='border border-red-500 px-2 my-2' onClick={()=> {
           console.log(x);
+          addItem(x.card.info.name);
         }}>Add</button>
       </div>)) ) : 
       <div>No Items Found</div>
