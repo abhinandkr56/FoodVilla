@@ -4,11 +4,19 @@ import { IMG_CDN_URL } from '../constants';
 import Shimmer from './Shimmer';
 import useRestaurant from '../utils/useRestaurant';
 import { addItem } from '../utils/cartSlice';
+import { useDispatch } from 'react-redux';
 
 
 const RestaurentMenu = () => {
   const props = useParams();
   const menus = useRestaurant(props.id);
+
+  const dispatch = useDispatch();
+
+  const handleCart = (item) => {
+    console.log(item);
+    dispatch(addItem(item));
+  } 
   return (
     <>
     <div>
@@ -29,8 +37,7 @@ const RestaurentMenu = () => {
         <h2>{x.card.info.name}</h2>
         <h3>{x.card.info.description}</h3>
         <button className='border border-red-500 px-2 my-2' onClick={()=> {
-          console.log(x);
-          addItem(x.card.info.name);
+          handleCart(x.card.info.name);
         }}>Add</button>
       </div>)) ) : 
       <div>No Items Found</div>
