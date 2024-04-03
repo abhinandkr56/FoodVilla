@@ -23,10 +23,13 @@ const RestaurentMenu = () => {
           ))
         ):(
         menus.map(x =>
-        <div className="restaurant-menu-card" key={x.id}>
+        <div className="border border-black h-200 w-1/12 px-4 m-2 sm:w-1/2 md:w-1/4 lg:w-1/6" key={x.id}>
         <img src={ IMG_CDN_URL + x.card.info.imageId}></img>
         <h2>{x.card.info.name}</h2>
         <h3>{x.card.info.description}</h3>
+        <button className='border border-red-500 px-2 my-2' onClick={()=> {
+          console.log(x);
+        }}>Add</button>
       </div>)) ) : 
       <div>No Items Found</div>
     }

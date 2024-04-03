@@ -4,6 +4,8 @@ import { IMG_CDN_URL } from "../constants"
 import { useEffect, useState } from "react";
 import { filter } from "../utils/helper";
 import useOnline from "../utils/useOnline";
+import { UseMemoDemo } from "./UseMemoDemo";
+import UseRefDemo from "./UseRefDemo";
 
 const Body = () => {
 
@@ -62,6 +64,10 @@ const Body = () => {
           />
         )))}
       </div>
+
+      <UseMemoDemo/>
+
+      <UseRefDemo/>
     </>
   );
 };

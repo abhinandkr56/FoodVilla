@@ -11,6 +11,7 @@ import Login from "./Components/Login";
 import Profile from "./Components/ProfileClass";
 import useLocalStorage from "./utils/useLocalStorage";
 import Shimmer from "./Components/Shimmer";
+import Cart from "./Components/Cart";
 //import InstaMart from "./Components/InstaMart";
 
 
@@ -33,7 +34,6 @@ const App = () => {
             setAuthenticatedLocalStorage(false);
         }
     const [authenticatedLocalStorage, setAuthenticatedLocalStorage] = useLocalStorage("IsAuthenticated", false);
-  
     const appRouter = createBrowserRouter([
         {
             path : "/",
@@ -63,7 +63,11 @@ const App = () => {
                 {
                     path:"/instamart",
                     element : <Suspense fallback ={<Shimmer/>}><InstaMart/></Suspense>
-                }
+                },
+                {
+                    path : "/cart",
+                    element: <Cart/>
+                },
             ]
         }
         ]);
