@@ -21,7 +21,7 @@ const Header = (prop) => {
                         <li className="px-4 sm:py-2 md:mb-0">
                             <Link to={"/cart"} className="flex items-center bg-blue-500 text-white font-bold py-1 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline">
                                 Cart: 
-                                <span className="ml-2 font-bold text-xl text-red-500 bg-white border-black border rounded-full px-2">
+                                <span data-testid ="cartItems" className="ml-2 font-bold text-xl text-red-500 bg-white border-black border rounded-full px-2">
                                 {cartItems.length}
                                 </span>
                             </Link>
